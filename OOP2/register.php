@@ -7,7 +7,8 @@ if(isset($_POST['nom'])&& isset($_POST['prenom']) && isset($_POST['telephone']) 
     $telephone = $_POST['telephone'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    User::create($nom, $prenom, $telephone, $email, $password);
+    $hasedPassword = password_hash($password, PASSWORD_DEFAULT);
+    User::create($nom, $prenom, $telephone, $email, $hasedPassword);
 }
 
 ?>
