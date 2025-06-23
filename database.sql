@@ -8,5 +8,5 @@ create table users(
     Prenom varchar(255),
     Email varchar(255),
     Telephone varchar(255),
-    Password varchar(255)
+    Pass varchar(255)
 );
